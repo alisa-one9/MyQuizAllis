@@ -1,14 +1,10 @@
 package com.example.myquizallis
 
 import android.app.Application
-import androidx.room.Room
-import androidx.room.Room.databaseBuilder
-import androidx.room.Room.databaseBuilder
 
-import com.example.myquizallis.data.QuizApi
+import com.example.myquizallis.dataRemote.QuizApi
 
-import com.example.myquizallis.data.Retrofit
-import com.example.myquizallis.domain.Repository
+import com.example.myquizallis.dataRemote.Retrofit
 
 class App: Application() {
 

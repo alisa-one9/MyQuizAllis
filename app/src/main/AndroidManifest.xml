@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myquizallis">
-<uses-permission android:name="android.permission.INTERNET"/>
+    package="com.example.myquizallis" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyQuizAllis"
-        android:name=".App">
-
-        <activity android:name=".SplashScreenActivity"
-            android:exported="true">
-        android:theme="@style/SplashScreenTheme"
+        android:theme="@style/Theme.MyQuizAllis" >
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GeografyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true" >
+            android:theme="@style/SplashScreenTheme"
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +30,12 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-
+            android:label="@string/app_name" >
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

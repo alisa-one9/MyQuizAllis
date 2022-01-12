@@ -1,6 +1,7 @@
 package com.example.myquizallis
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -12,12 +13,15 @@ import androidx.navigation.Navigation
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
+import com.example.myquizallis.databinding.ActivityMainBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 import java.util.ArrayList
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity :BaseActivity<ActivityMainBinding>() {
 
+    private val quizviewModel: MainViewModel by viewModel()
     private var navController: NavController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,6 +66,18 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    }
+
+    override fun inflateBinding(from: LayoutInflater): ActivityMainBinding {
+        TODO("Not yet implemented")
+    }
+
+    override fun setupUI() {
+        TODO("Not yet implemented")
+    }
+
+    override fun setupLiveData() {
+        TODO("Not yet implemented")
     }
 
 
